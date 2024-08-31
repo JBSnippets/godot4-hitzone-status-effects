@@ -7,7 +7,7 @@ This custom node can be used to detect a hit from an attack by monitoring collis
 - Automatically create statuses and/or effects when node body hits an Area2D.
 - Easily add a dictionary of status/effect resistances.
 - Includes `Damage`, `Heal` and `Knockback` effects.
-- Built to integrate with [!JBS Health Node](https://github.com/JBSnippets/godot4-health).
+- Built to integrate with [JBS Health Node](https://github.com/JBSnippets/godot4-health).
 - Signals are emitted before and after status/effect application.
 - Extend and create your own status and effect!
 
@@ -43,7 +43,7 @@ Once this plugin is enabled, you can add the `HitZone` node as a child of anothe
 ![Add Node](https://github.com/JBSnippets/godot4-hitzone-status-effects/blob/main/assets/add_node2.png)
 
 ## 📺 Video on How to use the plugin.
-[![Watch the video](https://github.com/JBSnippets/godot4-hitzone-status-effects/blob/main/assets/JBSnippets%20YT%20Thumbnail%204.png)](https://youtu.be/sO-GPKkjZOE)
+[![Watch the video](https://github.com/JBSnippets/godot4-hitzone-status-effects/blob/main/assets/JBSnippets%20YT%20Thumbnail%205.png)](https://youtu.be/sO-GPKkjZOE)
 
 ## 📡 More Plugins!
 Head on over to my website at [https://plugins.jbsnippets.com](https://plugins.jbsnippets.com) to read more about this plugin and other plugins that I've been creating during my game development journey with Godot!
