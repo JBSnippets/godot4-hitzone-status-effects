@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/JBSnippets/godot4-hitzone-status-effects/main/jbs_hitzone_node_128.png" width="32" height="32" /> Hit Zone & Status Effects ~ Godot 4+
+# <img src="https://raw.githubusercontent.com/JBSnippets/godot4-hitzone-status-effects/main/jbs_hitzone_node_128.png" width="32" height="32" /> Hit Zone, Status & Effect ~ Godot 4+
 A custom Godot 4+ node used to detect a hit from an attack and creates a series of status/effects on the target.
 
 This custom node can be used to detect a hit from an attack by monitoring collisions when a node body enters the selected Area2D. After calling the `hit_body` function either manually or automatically when collision is detected, status/effects are created in the target node body.
