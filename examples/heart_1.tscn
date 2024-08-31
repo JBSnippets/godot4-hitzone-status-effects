@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cky2jauflr6gh"]
+
+[ext_resource type="Texture2D" uid="uid://cuu0elg508v7g" path="res://examples/assets/heart1.png" id="1_sm056"]
+[ext_resource type="Script" path="res://addons/jbs_hitzone_node/jbs_hitzone.gd" id="3_xkbtc"]
+[ext_resource type="Script" path="res://addons/jbs_hitzone_node/status_effects/jbs_heal.gd" id="4_a0w8r"]
+
+[node name="Heart1" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-11.1488, -12.9326)
+polygon = PackedVector2Array(10.1526, 3.72266, 2.57137, -1.62878, -5.30713, 1.93884, -6.05038, 12.4931, 10.3012, 27.3581, 26.9501, 12.6417, 26.9501, 2.53345, 18.923, -1.48013)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sm056")
+
+[node name="HitZone" type="Node" parent="." node_paths=PackedStringArray("area_2d")]
+script = ExtResource("3_xkbtc")
+attack_group = ["Player"]
+area_2d = NodePath("..")
+monitor_on_ready = true
+
+[node name="Heal" type="Node" parent="HitZone"]
+script = ExtResource("4_a0w8r")
+amount = 20

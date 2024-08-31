@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cugbkk1rqetgu"]
+
+[ext_resource type="Texture2D" uid="uid://62vnqk445dn8" path="res://examples/assets/spike1.png" id="1_c2u61"]
+[ext_resource type="Script" path="res://addons/jbs_hitzone_node/jbs_hitzone.gd" id="2_j4j6h"]
+[ext_resource type="Script" path="res://addons/jbs_hitzone_node/status_effects/jbs_damage.gd" id="3_jiw0h"]
+[ext_resource type="Script" path="res://addons/jbs_hitzone_node/status_effects/jbs_knockback.gd" id="4_1ttlb"]
+
+[node name="Spike1" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-13, 15, 1, -13, 15, 15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c2u61")
+
+[node name="HitZone" type="Node" parent="." node_paths=PackedStringArray("area_2d")]
+script = ExtResource("2_j4j6h")
+attack_group = ["Player"]
+area_2d = NodePath("..")
+monitor_on_ready = true
+
+[node name="Damage" type="Node" parent="HitZone"]
+script = ExtResource("3_jiw0h")
+
+[node name="Knockback" type="Node" parent="HitZone"]
+script = ExtResource("4_1ttlb")
+duration = 0.1
+force = 800.0
+platformer = true
+metadata/chance_exists = true
